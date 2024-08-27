@@ -1,0 +1,173 @@
+:root {
+    /* Variables de colores */
+    --color-background: #f5f5f5;
+    --color-primary: #004a8f;
+    --color-secondary: #ccd3da;
+    --color-text: #34495E;
+    --color-placeholder: #A7C7E7;
+    --color-border: #ccc;
+    --color-text-output: #e8eef4;
+
+    /* Variables de fuentes */
+    --font-family: Arial, sans-serif;
+    --font-size-base: 16px;
+    --font-size-small: 20px;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+}
+
+.logo {
+    padding: 20px;
+    margin-left: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-left: 100px; /* Espacio para alinear con el logo */
+    display: flex;    
+    min-height: 80vh; /* El contenedor ocupa al menos el 100% del viewport */
+}
+
+.input-section, .output-section {
+    width: 45%;
+    background-color: var(--color-placeholder);
+    padding: 20px;
+    border-radius: 10px;
+    height: 700px;
+}
+
+textarea.input-text {
+    width: 100%;
+    height: 500px;
+    padding: 1px;
+    border-radius: 5px;
+    border: 1px solid var(--color-border);
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    resize: none;      /* Desactiva la redimensión */
+    overflow: auto;    /* Asegura que el contenido adicional se desplace si es necesario */
+}
+
+.info {
+    margin-top: 10px;
+    font-size: var(--font-size-small);
+    color: var(--color-text);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: var(--font-size-base);
+    cursor: pointer;
+}
+
+.encrypt-button {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.decrypt-button {
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+}
+
+.output-text.output-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /*centra el mensaje*/
+    height: 200px;
+    text-align: center;
+    border-radius: 5px;
+    color: var(--color-text-output);
+    background-color: white;
+    padding: 1px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    border: 1px solid var(--color-border);
+}
+
+.output-text p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.copy-button {
+    background-color: var(--color-primary);
+    color: var(--color-text-output);
+    margin-top: 50px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--color-primary);
+    color: white;
+}
+
+footer p {
+    margin: 0;
+    font-size: var(--font-size-small);
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Diseño Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .input-section, .output-section {
+        width: 100%;
+        margin: 30px;
+    }
+    
+    .footer {
+        padding: 0.5rem; 
+        font-size: 0.875rem;
+    }
+
+    .logo {
+        position: static; 
+    }
+    
+  
+}
+
+
+
